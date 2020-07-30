@@ -86,7 +86,6 @@
     "unfetch": "^4.1.0",
     "url-loader": "1.1.2",
     "url-polyfill": "^1.1.7",
-    "vanilla-lazyload": "11.0.6",
     "webpack": "4.29.6",
     "webpack-dev-server": "3.8.0",
     "webpack-manifest-plugin": "2.0.4",
