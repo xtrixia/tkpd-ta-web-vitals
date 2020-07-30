@@ -25,7 +25,7 @@ const Footer = () => {
 	const [showAll, setShowAll] = useState(false);
   const [showData, setShowData] = useState('');
   const disqusInit = useRef();
-  const { data, loading } = useData(`${API_URL}/footer`, {}, { method: 'GET' }, { ssr: true });
+  const { data, loading } = useData(`${API_URL}/footer`, {}, { method: 'GET' }, { ssr: false });
 
 	useEffect(() => {
 		if (!loading && data) {
