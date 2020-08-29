@@ -2,7 +2,7 @@ import { createLinkTag, createPreloadTag, createScriptTag, preconnectTags } from
 import { isProd } from '@utils';
 import { normalizeCSS } from '@utils/html/critical-css';
 import { preloadedMainStyles, preloadedMainScripts } from './get-main-assets';
-import { hotjarScript } from './thirdparty';
+// import { hotjarScript } from './thirdparty';
 
 export const getHeader = ({
   chunkExtractor,
@@ -56,8 +56,8 @@ export const getFooter = ({ chunkExtractor, initialState = {}, ssr = false, data
         window.ssr=${ssr};
         window.__cache=${JSON.stringify(dataClient?.cache)};
         window.ENV="${process.env.ENV}";
-			</script>
-			${hotjarScript}
+      </script>
+      
       ${chunkExtractor?.getScriptTags({ crossorigin: 'anonymous' })?.replace(/\<script async/g, '<script defer') ||
         preloadedMainScripts(createScriptTag)}
     </body>
